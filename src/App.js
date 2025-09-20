@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import AddressAutocomplete from './components/AddressAutocomplete';
+import MapDisplay from './components/MapDisplay';
+import ScoreDisplay from './components/ScoreDisplay';
+import SearchHistory from './components/SearchHistory';
+import { ScoreProvider } from './contexts/ScoreContext';
+import { SearchHistoryProvider } from './contexts/SearchHistoryContext';
 
 function App() {
+  const [selectedAddress, setSelectedAddress] = useState('');
+
+  const handleSelectFromHistory = (address) => {
+    setSelectedAddress(address);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SearchHistoryProvider>
+      <ScoreProvider>
+        <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
+          <h1 style={{ textAlign: 'center', marginBottom: '30px', color: '#2c3e50' }}>
+            Map Insights - Location Analysis
+          </h1>
+          <SearchHistory onSelectFromHistory={handleSelectFromHistory} />
+          <AddressAutocomplete selectedAddress={selectedAddress} />
+          <MapDisplay />
+          <ScoreDisplay />
+        </div>
+      </ScoreProvider>
+    </SearchHistoryProvider>
   );
 }
 
