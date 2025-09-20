@@ -1,3 +1,5 @@
+# Vercel URL
+https://map-insights.vercel.app/
 
 # What I built vs AI
 AI generated the score calculations, render the map and some css styles, I did the other things

@@ -6,7 +6,7 @@ import { useAmenities } from '../hooks/useAmenities';
 const LOCATIONIQ_API = "https://api.locationiq.com/v1/autocomplete";
 
 async function autocompleteAddress(query) {
-  const url = `${LOCATIONIQ_API}?key=${process.env.LOCATIONIQ_API_KEY}&q=${encodeURIComponent(query)}&limit=10&format=json`;
+  const url = `${LOCATIONIQ_API}?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${encodeURIComponent(query)}&limit=10&format=json`;
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error('Network response was not ok');
