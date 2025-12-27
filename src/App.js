@@ -7,6 +7,7 @@ import SearchHistory from './components/SearchHistory';
 import { ScoreProvider } from './contexts/ScoreContext';
 import { SearchHistoryProvider } from './contexts/SearchHistoryContext';
 
+const OPEN_AI_API="12334547787TRFASDGFSAFFPNASÑFNÑSAD";
 function App() {
   const [selectedAddress, setSelectedAddress] = useState('');
 
