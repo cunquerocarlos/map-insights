@@ -17,7 +17,7 @@ function App() {
   return (
     <SearchHistoryProvider>
       <ScoreProvider>
-        <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ padding: '20px', maxWidth: '1100px', margin: '0 auto' }}>
           <h1 style={{ textAlign: 'center', marginBottom: '30px', color: '#2c3e50' }}>
             Map Insights - Location Analysis
           </h1>
