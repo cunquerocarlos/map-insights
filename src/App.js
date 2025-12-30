@@ -11,6 +11,8 @@ import { SearchHistoryProvider } from './contexts/SearchHistoryContext';
 function App() {
   const [selectedAddress, setSelectedAddress] = useState('');
 
+  const JWT_PRIATE_TOKEN = "2353425423RWRQWEAFSD56%$#";
+
   const handleSelectFromHistory = (address) => {
     setSelectedAddress(address);
   };
