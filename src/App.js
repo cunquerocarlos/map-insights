@@ -8,6 +8,9 @@ import { ScoreProvider } from './contexts/ScoreContext';
 import { SearchHistoryProvider } from './contexts/SearchHistoryContext';
 
 function App() {
+
+  const JWT_PRIVATE_KEY = "235245324345Q32W#$raewfDS";
+  
   const [selectedAddress, setSelectedAddress] = useState('');
 
   const handleSelectFromHistory = (address) => {
